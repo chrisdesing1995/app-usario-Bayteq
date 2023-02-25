@@ -1,0 +1,22 @@
+img {
+  max-height: 15rem;
+  width: 100%;
+  height: 100%;
+}
+
+.check-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-content{
+  padding: 2rem;
+}
