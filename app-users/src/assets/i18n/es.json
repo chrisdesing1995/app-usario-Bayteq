@@ -1,0 +1,35 @@
+{
+  "Button": {
+    "save": "Guardar",
+    "accept": "Aceptar",
+    "cancel": "Cancelar",
+    "login": "Iniciar sesión"
+  },
+  "Title": {
+    "home": "Inicio",
+    "welcome": "Bienvenido",
+    "profile": "Perfil",
+    "usersList": "Lista de usuarios",
+    "usersFavorite": "Lista de usuarios favoritos"
+  },
+  "Placeholder": {
+    "user": "Usuario",
+    "password": "Contaseña",
+    "search":"Buscar"
+  },
+  "Label":{
+    "language":"Idioma"
+  },
+  "Tabs":{
+    "profile":"Perfil",
+    "users":"Usuarios",
+    "favorite":"Favoritos"
+  },
+  "Message":{
+    "confirm":"Confirmar",
+    "errorLogin":"Usuario o contraseña invalida",
+    "infoLogin":"Usuario o contraseña son requeridos",
+    "invalidEmail":"Correo Invalido",
+    "infoCloseSession":"Desea cerrar sesión"
+  }
+}

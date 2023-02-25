@@ -1,0 +1,36 @@
+{
+  "Button": {
+    "save": "Save",
+    "accept": "Accept",
+    "cancel": "Cancel",
+    "login": "Login"
+  },
+  "Title": {
+    "home": "Home",
+    "welcome": "Welcome",
+    "profile": "Profile",
+    "usersList": "User list",
+    "usersFavorite": "Favorite users list"
+  },
+  "Placeholder": {
+    "user": "User",
+    "password": "Password",
+    "search":"search"
+  },
+  "Label":{
+    "language":"Language"
+  },
+  "Tabs":{
+    "profile":"Profile",
+    "users":"Users",
+    "favorite":"Favorite"
+  },
+  "Message":{
+    "confirm":"Confirm",
+    "errorLogin":"Invalid username or password",
+    "infoLogin":"Username or password are required",
+    "invalidEmail":"Invalid email",
+    "infoCloseSession":"Do you want to log out"
+  }
+}
+
