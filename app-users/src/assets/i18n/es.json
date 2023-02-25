@@ -18,7 +18,12 @@
     "search":"Buscar"
   },
   "Label":{
-    "language":"Idioma"
+    "language":"Idioma",
+    "company":"Compañia",
+    "address":"Dirección",
+    "city":"Ciudad",
+    "phone":"Teléfono",
+    "website":"Página web"
   },
   "Tabs":{
     "profile":"Perfil",
@@ -32,4 +37,5 @@
     "invalidEmail":"Correo Invalido",
     "infoCloseSession":"Desea cerrar sesión"
   }
+
 }

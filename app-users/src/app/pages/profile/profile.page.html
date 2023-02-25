@@ -39,31 +39,31 @@
   <ion-list>
     <ion-item>
       <ion-icon slot="start" name="home-outline" color="primary"></ion-icon>
-      <ion-label position="floating">Ciudad</ion-label>
+      <ion-label position="floating">{{'Label.city'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [(ngModel)]="user?.address.city" readonly></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-icon slot="start" name="location-outline" color="danger"></ion-icon>
-      <ion-label position="floating">Dirección</ion-label>
+      <ion-label position="floating">{{'Label.address'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [(ngModel)]="user?.address.street" readonly></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-icon slot="start" name="call-outline" color="tertiary"></ion-icon>
-      <ion-label position="floating">Teléfono</ion-label>
+      <ion-label position="floating">{{'Label.phone'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [ngModel]="user?.phone" readonly></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-icon slot="start" name="globe-outline" color="secondary"></ion-icon>
-      <ion-label position="floating">Pagina web</ion-label>
+      <ion-label position="floating">{{'Label.website'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [ngModel]="user?.website" readonly></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-icon slot="start" name="business-outline" color="primary"></ion-icon>
-      <ion-label position="floating">Compañia</ion-label>
+      <ion-label position="floating">{{'Label.company'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [(ngModel)]="user?.company.name" readonly></ion-input>
     </ion-item>
   </ion-list>
