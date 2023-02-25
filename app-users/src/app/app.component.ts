@@ -3,6 +3,8 @@ import { DataAccessService } from './shared/services/data-access.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage-angular';
 import { DbKey } from './shared/utils/dbKey';
+import { Platform } from '@ionic/angular';
+import { SplashScreen } from '@capacitor/splash-screen';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +13,7 @@ import { DbKey } from './shared/utils/dbKey';
 })
 export class AppComponent {
   constructor(
+    private platform: Platform,
     private translateService: TranslateService,
     private dataAccess: DataAccessService,
     private storage: Storage
@@ -20,6 +23,10 @@ export class AppComponent {
   }
 
   async inicialieApp() {
+    this.platform.ready().then(() => {
+      SplashScreen.hide();
+    });
+
     await this.storage.create();
     this.dataAccess.getLanguage().then((lang) => {
       if (!lang) {
