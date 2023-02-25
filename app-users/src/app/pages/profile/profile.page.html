@@ -5,7 +5,7 @@
 
 <ion-content class="ion-padding">
 
-  <ion-card>
+  <ion-card color="primary">
     <ion-card-header>
       <div style="width: 100%;" class="avatar-content">
         <ion-avatar>
@@ -18,52 +18,36 @@
     </ion-card-header>
   
     <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col class="avatar-content">
-            <ion-icon size="large" name="call-outline"></ion-icon>
-          </ion-col>
-          <ion-col class="avatar-content">
-            <ion-icon size="large" name="mail-outline"></ion-icon>
-          </ion-col>
-          <ion-col>
-            <ion-col class="avatar-content">
-              <ion-icon size="large" name="logo-whatsapp"></ion-icon>
-            </ion-col>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-item color="primary" lines="none">
+        <ion-icon slot="start" name="call-outline"></ion-icon>
+        <ion-label position="stacked" color="medium">{{'Label.phone'|translate}}</ion-label>
+        <ion-input placeholder="Enter text" [ngModel]="user?.phone" readonly></ion-input>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 
   <ion-list>
     <ion-item>
       <ion-icon slot="start" name="home-outline" color="primary"></ion-icon>
-      <ion-label position="floating">{{'Label.city'|translate}}</ion-label>
+      <ion-label position="stacked" color="medium">{{'Label.city'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [(ngModel)]="user?.address.city" readonly></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-icon slot="start" name="location-outline" color="danger"></ion-icon>
-      <ion-label position="floating">{{'Label.address'|translate}}</ion-label>
+      <ion-label position="stacked" color="medium">{{'Label.address'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [(ngModel)]="user?.address.street" readonly></ion-input>
     </ion-item>
-  
-    <ion-item>
-      <ion-icon slot="start" name="call-outline" color="tertiary"></ion-icon>
-      <ion-label position="floating">{{'Label.phone'|translate}}</ion-label>
-      <ion-input placeholder="Enter text" [ngModel]="user?.phone" readonly></ion-input>
-    </ion-item>
-  
+
     <ion-item>
       <ion-icon slot="start" name="globe-outline" color="secondary"></ion-icon>
-      <ion-label position="floating">{{'Label.website'|translate}}</ion-label>
+      <ion-label position="stacked" color="medium">{{'Label.website'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [ngModel]="user?.website" readonly></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-icon slot="start" name="business-outline" color="primary"></ion-icon>
-      <ion-label position="floating">{{'Label.company'|translate}}</ion-label>
+      <ion-label position="stacked" color="medium">{{'Label.company'|translate}}</ion-label>
       <ion-input placeholder="Enter text" [(ngModel)]="user?.company.name" readonly></ion-input>
     </ion-item>
   </ion-list>

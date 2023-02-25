@@ -47,6 +47,7 @@ export class HeaderComponent implements OnInit {
           handler: async () => {
             await this.loadingService.presentLoading();
             this.storage.remove(DbKey.userLocalKey).then(() => {
+              this.storage.set(DbKey.HAS_LOGGED_IN, false);
               this.loadingService.dismissLoading();
               this.router.navigateByUrl(AppConst.LoginPage);
             });

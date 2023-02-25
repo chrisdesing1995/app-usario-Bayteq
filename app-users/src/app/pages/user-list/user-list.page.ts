@@ -3,6 +3,7 @@ import { DataAccessService } from 'src/app/shared/services/data-access.service';
 import { StorageService } from 'src/app/shared/services/storage.service';
 import { TranslateValueService } from 'src/app/shared/services/translateValue.service';
 import { DbKey } from 'src/app/shared/utils/dbKey';
+import { Browser } from '@capacitor/browser';
 
 @Component({
   selector: 'app-user-list',
@@ -49,5 +50,12 @@ export class UserListPage implements OnInit {
     this.storage.set(DbKey.userListKey, this.users);
     auxlist = this.users.filter((x) => x.favorite == true);
     this.storage.set(DbKey.userFavoriteKey, auxlist);
+  }
+
+  async openWhatsapp(value:any){  
+    let phone = value.substr(-9);
+    await Browser.open({
+      url:'https://api.whatsapp.com/send?phone=593'+phone
+    });
   }
 }

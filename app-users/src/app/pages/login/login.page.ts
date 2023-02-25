@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
   users:any[] = [];
   user: any = {
     email: '',
-    password: '',
+    username: '',
   };
 
   constructor(
@@ -52,14 +52,15 @@ export class LoginPage implements OnInit {
 
   async onClickLogin() {
     await this.loadingService.presentLoading();
-    if(this.user?.email == ''   ||  this.user?.password == ''){
+    if(this.user?.email == ''   ||  this.user?.username == ''){
       this.loadingService.dismissLoading();
       return this.toasService.presentToast(this._t.l('Message.infoLogin') + ' ' + this.user.email, 2000, 'alert-circle-outline', AppConst.WarningColor);;   
     }
     if (this.validateEmail()) {
-      let user = this.getUserByEmailAndPassword(this.user.email,this.user.password);
+      let user = this.getUserByEmailAndPassword(this.user.email,this.user.username);
       if(user){
-        this.storage.set(DbKey.userLocalKey,user);
+         await this.storage.set(DbKey.HAS_LOGGED_IN, true);
+         await this.storage.set(DbKey.userLocalKey,user);
         this.loadingService.dismissLoading();
         this.toasService.presentToast(this._t.l('Title.welcome') + ' ' + this.user.email, 2000, 'checkmark-circle', AppConst.SuccessColor);
         return this.router.navigateByUrl(AppConst.Profile);
@@ -103,8 +104,8 @@ export class LoginPage implements OnInit {
     });
   }
 
-  getUserByEmailAndPassword(email: string, password: string):any {
-    let user = this.users.find(x=>x.email == email && x.password == password);
+  getUserByEmailAndPassword(email: string, userName: string):any {
+    let user = this.users.find(x=>x.email == email && x.username == userName);
     console.log(user);
     return user;
   }

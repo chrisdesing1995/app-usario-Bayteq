@@ -15,6 +15,7 @@
   "Placeholder": {
     "user": "User",
     "password": "Password",
+    "email": "Email",
     "search":"search"
   },
   "Label":{
@@ -23,7 +24,8 @@
     "address":"Address",
     "city":"City",
     "phone":"Phone",
-    "website":"Web site"
+    "website":"Web site",
+    "versionApp":"Version 1.0.2"
   },
   "Tabs":{
     "profile":"Profile",
