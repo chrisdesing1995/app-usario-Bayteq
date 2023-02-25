@@ -18,7 +18,12 @@
     "search":"search"
   },
   "Label":{
-    "language":"Language"
+    "language":"Language",
+    "company":"Company",
+    "address":"Address",
+    "city":"City",
+    "phone":"Phone",
+    "website":"Web site"
   },
   "Tabs":{
     "profile":"Profile",

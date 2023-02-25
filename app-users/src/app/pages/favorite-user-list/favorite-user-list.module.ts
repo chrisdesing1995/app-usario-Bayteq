@@ -9,7 +9,7 @@ import { FavoriteUserListPageRoutingModule } from './favorite-user-list-routing.
 import { FavoriteUserListPage } from './favorite-user-list.page';
 import { TranslateModule } from '@ngx-translate/core';
 import { HeaderModule } from 'src/app/core/header/header.module';
-import { UserFilterPipe } from 'src/app/shared/pipes/user-filter.pipe';
+import { UserFavoriteFilterPipe } from 'src/app/shared/pipes/user-favorite-filter.pipe';
 
 @NgModule({
   imports: [
@@ -20,6 +20,6 @@ import { UserFilterPipe } from 'src/app/shared/pipes/user-filter.pipe';
     TranslateModule,
     HeaderModule
   ],
-  declarations: [FavoriteUserListPage,UserFilterPipe]
+  declarations: [FavoriteUserListPage,UserFavoriteFilterPipe]
 })
 export class FavoriteUserListPageModule {}
