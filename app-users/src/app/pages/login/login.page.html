@@ -7,14 +7,14 @@
       <ion-title><h2>{{'Title.welcome'|translate}}</h2></ion-title>
     </ion-item>
     <ion-item class="ion-margin-top ion-margin-bottom">
-      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
-      <ion-input type="email" [placeholder]="'Placeholder.user'|translate" [(ngModel)]="user.email" required
+      <ion-icon slot="start" name="mail-outline"></ion-icon>
+      <ion-input type="email" [placeholder]="'Placeholder.email'|translate" [(ngModel)]="user.email" required
         pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"></ion-input>
     </ion-item>
 
     <ion-item class="ion-margin-top ion-margin-bottom">
-      <ion-icon slot="start" name="lock-open-outline"></ion-icon>
-      <ion-input name="password" [placeholder]="'Placeholder.password'|translate" [type]="type" [(ngModel)]="user.password" required></ion-input>
+      <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+      <ion-input name="password" [placeholder]="'Placeholder.user'|translate" [type]="type" [(ngModel)]="user.username" required></ion-input>
       <ion-icon slot="end" [name]="icono" (click)="getTypeInput()" color="medium"></ion-icon>
     </ion-item>
     <br>
@@ -52,6 +52,6 @@
 </ion-content>
 <ion-footer class="ion-no-border">
   <ion-toolbar class="ion-text-center">
-    <ion-label>Versión 1.0.1</ion-label>
+    <ion-label>{{'Label.versionApp'|translate}}</ion-label>
   </ion-toolbar>
 </ion-footer>
